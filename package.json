@@ -1,16 +1,29 @@
 {
   "name": "truyenhay-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "Vietnamese Comics API for Node using scraping technique",
+  "main": "index.js",
   "scripts": {
     "build": "npm install && tsc",
     "start": "nodemon dist/server.js",
     "watch": "tsc -w",
+    "dev": "nodemon api/server.ts",
     "server": "nodemon dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "url": "https://github.com/hoangbao0201/truyenhay-api.git",
+    "type": "git"
+  },
+  "keywords": [
+    "api",
+    "comics",
+    "comics-api",
+    "scaping",
+    "nettruyen-api",
+    "truyenhay-api"
+  ],
+  "author": "hoangbao0201",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",

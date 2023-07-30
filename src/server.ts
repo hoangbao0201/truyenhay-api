@@ -1,5 +1,5 @@
 import express from "express"
-import { comicsServices } from "./services";
+import { comicsServices } from "..";
 import cors from "cors"
 
 

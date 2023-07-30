@@ -1,9 +1,12 @@
 import express from "express"
 import { comicsServices } from "./services";
+import cors from "cors"
+
 
 const app = express();
 const PORT = 4000
 
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -31,7 +34,7 @@ const main = async () => {
                 comics: comics || null
             })
         } catch (error) {
-            return res.status(500).json({
+            return res.status(200).json({
                 success: false,
                 message: "Get Comics Error",
                 error: error

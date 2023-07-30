@@ -8,6 +8,7 @@ class ComicsSevices {
     private domain: string;
     constructor() {
         this.domain = "https://www.nettruyen.com";
+        // this.domain = "https://metruyencv.com";
     }
 
     private getComicId(link?: string): string | undefined {
@@ -31,6 +32,7 @@ class ComicsSevices {
                 headers: {
                     "User-Agent": "*",
                 },
+                // headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'}
             });
             return load(data);
         } catch (err) {
@@ -178,6 +180,9 @@ class ComicsSevices {
         page: number = 1
     ): Promise<any> {
         try {
+            // const $ = await this.createRequest("");
+            // return $('.text-secondary.fz-14.text-overflow-2-lines').text()
+
             return await this.getComics("tim-truyen?sort=15", page, status);
         } catch (err) {
             throw err;
